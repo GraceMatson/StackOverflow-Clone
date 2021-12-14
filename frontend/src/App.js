@@ -1,9 +1,11 @@
 import React from 'react';
+import LoginPage from './components/login';
 
 function App(){
   return (
     <div className="App">
-      Bleh
+      <LoginPage />
+      Should there be something here?
     </div>
   )
 }
