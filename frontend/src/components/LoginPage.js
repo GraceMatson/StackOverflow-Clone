@@ -1,9 +1,8 @@
 import React from 'react'
-import './login.css'
 
 function LoginPage() {
   return (
-    <div className="Login_page h-screen flex bg-gray-100">
+    <div className="h-screen flex bg-gray-100" style={{ placeContent: "center" }}>
       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
@@ -34,7 +33,7 @@ function LoginPage() {
                 />
               </div>
               <div>
-                <label HTMLf="password" className="sr-only">
+                <label htmlFor="password" className="sr-only">
                   Password
                 </label>
                 <input
@@ -66,10 +65,8 @@ function LoginPage() {
               </div>
 
               <div className="text-sm">
-                <a
-                  href="#"
-                  className="font-medium text-indigo-600 hover:text-indigo-500"
-                >
+                <a href='www.google.co.in'
+                  className="font-medium text-indigo-600 hover:text-indigo-500"  >
                   Forgot your password?
                 </a>
               </div>
@@ -102,7 +99,8 @@ function LoginPage() {
         </div>
       </div>
     </div>
+
   )
 }
 
-export default LoginPage
+export default LoginPage;

@@ -1,11 +1,12 @@
 import React from 'react';
-import LoginPage from './components/login';
+import './App.css'
+import LoginPage from './components/LoginPage';
+
 
 function App(){
   return (
-    <div className="App">
+    <div className="App">      
       <LoginPage />
-      Should there be something here?
     </div>
   )
 }
