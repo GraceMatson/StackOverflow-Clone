@@ -1,0 +1,51 @@
+.TopNav{
+    display: flex;
+    place-content: space-between;
+    align-items: center;
+    background-color: #d7dce5;
+    width: 100%;
+}
+
+.TopNav_logo_img{
+    height : 50px;
+    padding:5px;
+}
+
+.TopNav_logo :hover{
+    background-color: #cdd1da;
+    border-radius: 15px;
+    padding:5px;
+}
+
+.TopNav_searchBar{
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding: 10px;
+    height: 40px;
+    border-radius: 20px;
+    width : calc(100% - 500px);
+}
+
+
+.TopNav_searchBar > input{
+    outline: none;
+    width: 100%;
+    background-color: #f6f6f6;
+}
+
+.TopNav_searchBar > input :active{
+    width: 100%;
+    outline: none;
+    background-color: whitesmoke;
+}
+
+.TopNav_options{
+    padding:10px;
+    display: flex;
+}
+
+.TopNav_svg{
+    color: gray;
+    transform: scale(1.2);
+}
