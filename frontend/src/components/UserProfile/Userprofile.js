@@ -8,19 +8,24 @@ import DateRangeIcon from '@mui/icons-material/DateRange'
 function UserProfile(props) {
 
     let userName = "User Name";
-    if(props.userName){
-        userName = props.userName;
+    let avatar_src = "";
+    let userAge = 0;
+    let lastSeen = 0;
+    let activeDays = 0;
+    if(props.memberDets){
+        userName = props.memberDets.userName;
+        avatar_src = props.memberDets.avatar_src;
+        userAge = props.memberDets.userAge;
+        lastSeen = props.memberDets.lastSeen;
+        activeDays = props.memberDets.activeDays;
     }
-    let userAge = props.memberDets.platform_age_of_user? props.memberDets.platform_age_of_user : 0;
-    let lastSeen = props.memberDets.lastSeen? props.memberDets.lastSeen : 0;
-    let activeStreak = props.memberDets.streak? props.memberDets.streak : 0;
-
+    
   return (
 
     <div className="UserProfile_container">
       <div className="UserProfile">
         <div className="UserProfile_avatar">
-          <Avatar src={props.avatar_src} className="svg" />
+          <Avatar src={avatar_src} className="svg" />
         </div>
 
         <div className="UserProfile_details">
@@ -30,7 +35,7 @@ function UserProfile(props) {
               <IconButton>
                 <CakeIcon />
               </IconButton>
-              Member for: {userAge} days
+              Member for: {userAge}
             </div>
             <div className="UserProfile_activityDetails_element">
               <IconButton>
@@ -42,7 +47,7 @@ function UserProfile(props) {
               <IconButton>
                 <DateRangeIcon />
               </IconButton>
-              Active for {activeStreak } days
+              Active for {activeDays} days
             </div>
           </div>
         </div>
