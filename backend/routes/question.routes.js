@@ -1,23 +1,23 @@
 const express = require('express');
 const router = express.Router({ mergeParams: true });
-const User = require('../models/user');
+const Question = require('../models/question');
 
 router.get("/", async (request, response) => {
-    const users = await User.find({});
+    const questions = await Question.find({});
   
     try {
-      response.send(users);
+      response.send(questions);
     } catch (error) {
       response.status(500).send(error);
     }
   });
 
-router.post("/add_user", async (request, response) => {
-    const user = new User(request.body);
+router.post("/add_question", async (request, response) => {
+    const question = new Question(request.body);
   
     try {
-      await user.save();
-      response.send(user);
+      await question.save();
+      response.send(question);
     } catch (error) {
       response.status(500).send(error);
     }

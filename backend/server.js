@@ -9,6 +9,7 @@ const cookieParser = require("cookie-parser");
 dotenv.config({ path: './config.env' });
 
 const userRoutes = require('./routes/user.routes')
+const questionRoutes = require('./routes/question.routes')
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -57,7 +58,8 @@ app.get('/auth/outlook/callback',
     res.redirect('/users');
   });
 
-  app.use("/", userRoutes);
+app.use("/users", userRoutes);
+app.use("/questions", questionRoutes);
 
 app.listen(PORT, ()=> {
   console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.blue.bold);
