@@ -9,4 +9,4 @@ function QuestionCard() {
     )
 }
 
-export default QuestionCard
+export default QuestionCard;

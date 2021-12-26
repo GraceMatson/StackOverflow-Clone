@@ -3,11 +3,8 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import Users from './routes/Users'
-import Questions from './routes/Questions'
-import './index.css';
-import App from './App';
-import UserProfile from './components/UserProfile/Userprofile';
+import UserProfile from './routes/UserProfile/Userprofile'
+import LoginPage from './routes/LoginPage/LoginPage';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -15,8 +12,8 @@ ReactDOM.render(
     <BrowserRouter >
     <Routes >
       <Route path="/" element={<App />} />
-      <Route path="/Questions" element={<Questions />} />
-      <Route path="/Users" element={<Users />} />
+      <Route path="/login" element={<LoginPage />} />      
+      <Route path="/UserProfile" element={<UserProfile />} />
     </Routes>
     </BrowserRouter>
   </React.StrictMode>,
