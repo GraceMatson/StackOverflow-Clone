@@ -1,0 +1,44 @@
+.svg {
+  transform: scale(2);
+}
+
+.UserProfile_avatar {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  place-content: center;
+  padding: 10px;
+}
+
+.UserProfile_container {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  place-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 50px;
+  height: 100vh;
+}
+
+.UserProfile {
+  place-content: center;
+}
+
+.UserProfile_details {
+  padding: 30px;
+  width: 100%;
+}
+
+.UserProfile_details > h1 {
+  font-size: 40px;
+  padding: 5px;
+}
+
+.UserProfile_details_activityDets {
+  display: flex;
+}
+
+.UserProfile_activityDetails_element {
+  padding: 5px;
+}
