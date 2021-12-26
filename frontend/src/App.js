@@ -12,9 +12,10 @@ function App(){
       <TopNav 
         avatar_src = {dp_src}
       />
-
-      <LoginPage
+      <UserProfile
         memberDets = {memberDets}
+      />
+      <LoginPage
       />
       Should there be something here?
     </div>
