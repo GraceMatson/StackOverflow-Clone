@@ -11,6 +11,9 @@ function UserProfile(props) {
     if(props.userName){
         userName = props.userName;
     }
+    let userAge = props.memberDets.platform_age_of_user? props.memberDets.platform_age_of_user : 0;
+    let lastSeen = props.memberDets.lastSeen? props.memberDets.lastSeen : 0;
+    let activeStreak = props.memberDets.streak? props.memberDets.streak : 0;
 
   return (
 
@@ -27,19 +30,19 @@ function UserProfile(props) {
               <IconButton>
                 <CakeIcon />
               </IconButton>
-              Member for: {props.member_days| '_____'} days
+              Member for: {userAge} days
             </div>
             <div className="UserProfile_activityDetails_element">
               <IconButton>
                 <AccessTimeIcon />
               </IconButton>
-              Last seen on: {props.member_lastSeen | '_____'}
+              Last seen on: {lastSeen}
             </div>
             <div className="UserProfile_activityDetails_element">
               <IconButton>
                 <DateRangeIcon />
               </IconButton>
-              Active for {props.member_activeTime | '_____'} days
+              Active for {activeStreak } days
             </div>
           </div>
         </div>
