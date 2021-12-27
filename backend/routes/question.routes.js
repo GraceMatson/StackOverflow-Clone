@@ -1,26 +1,26 @@
 const express = require('express');
 const router = express.Router({ mergeParams: true });
 const Question = require('../models/question');
+const { getPosts, createPost, deletePost, updatePost } = require('../controllers/questions');
 
-router.get("/", async (request, response) => {
-    const questions = await Question.find({});
-  
-    try {
-      response.send(questions);
-    } catch (error) {
-      response.status(500).send(error);
-    }
-  });
 
-router.post("/add_question", async (request, response) => {
-    const question = new Question(request.body);
-  
-    try {
-      await question.save();
-      response.send(question);
-    } catch (error) {
-      response.status(500).send(error);
-    }
-});
+
+router
+  .route('/')
+  .get(getPosts);
+
+
+router
+  .route('/add_question')
+  .post(createPost);
+
+
+router
+  .route('/delete_question/:id')
+  .delete(deletePost);
+
+router
+  .route('/update_question/:id')
+  .put(updatePost)
 
 module.exports = router;
